@@ -1426,7 +1426,7 @@ farmsettings:Cheat("Checkbox", "Convert Hive Balloon", function(State) kometa.to
 farmsettings:Cheat("Checkbox", "Don't Convert", function(State) kometa.toggles.donotconvert = State end)
 farmsettings:Cheat("Checkbox", "Don't Farm Tokens", function(State) kometa.toggles.donotfarmtokens = State end)
 farmsettings:Cheat("Checkbox", "Enable Token Blacklisting", function(State) kometa.toggles.enabletokenblacklisting = State end)
-farmsettings:Cheat("Slider", "Walk Speed", function(Value) kometa.vars.walkspeed = Value end, {min = 0, max = 70, suffix = " studs", default = 30})
+farmsettings:Cheat("Slider", "Walk Speed", function(Value) kometa.vars.walkspeed = Value end, {min = 0, max = 100, suffix = " studs", default = 30})
 farmsettings:Cheat("Slider", "Jump Power", function(Value) kometa.vars.jumppower = Value end, {min = 0, max = 120, suffix = " studs", default = 70})
 local raresettings = setttab:Sector("Tokens Settings")
 raresettings:Cheat("Textbox", "Asset ID", function(Value) rarename = Value end, {placeholder = 'rbxassetid'})
