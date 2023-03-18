@@ -2066,7 +2066,7 @@ task.spawn(function() while task.wait(20*60+10) do
         game:GetService("ReplicatedStorage").Events.PlayerActivesCommand:FireServer({["Name"] = "Super Smoothie"})
     end
 end end)
-task.spawn(function() while task.wait(.00000000000000001) do
+task.spawn(function() while task.wait(.00000000000000000001) do
     if kometa.beessettings.usbtoggle then
         if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.BeePopUp.TypeName.Text:match(kometa.beessettings.usb) then
             temptable.feed(kometa.beessettings.general.x, kometa.beessettings.general.y, "RoyalJelly")
