@@ -1283,7 +1283,7 @@ farmsecond:Cheat("Checkbox", "Auto Free Antpasses", function(State) kometa.toggl
 farmsecond:Cheat("Checkbox", "Auto Free Robo Passes", function(State) kometa.toggles.freerobopass = State end)
 farmsecond:Cheat("Checkbox", "Auto Special Sprout Summoner", function(State) kometa.toggles.autospawnsprout = State end)
 farmsecond:Cheat("Checkbox", "Auto Honeystorm", function(State) kometa.toggles.honeystorm = State end)
-farmsecond:Cheat("Checkbox", "Auto Misha daun", function(State) kometa.toggles.collectgingerbreads = State end) Онетт гей
+-- farmsecond:Cheat("Checkbox", "Auto Gingerbread Bears", function(State) kometa.toggles.collectgingerbreads = State end) Онетт гей
 farmsecond:Cheat("Checkbox", "Auto Samovar", function(State) kometa.toggles.autosamovar = State end)
 farmsecond:Cheat("Checkbox", "Auto Stockings", function(State) kometa.toggles.autostockings = State end)
 farmsecond:Cheat("Checkbox", "Auto Honey Candles", function(State) kometa.toggles.autocandles = State end)
@@ -1294,7 +1294,7 @@ farmsecond:Cheat("Checkbox", "Farm Sprouts", function(State) kometa.toggles.farm
 farmsecond:Cheat("Checkbox", "Farm Puffshrooms", function(State) kometa.toggles.farmpuffshrooms = State end)
 farmsecond:Cheat("Checkbox", "Farm Tickets ⚠️", function(State) kometa.toggles.farmtickets = State end)
 farmsecond:Cheat("Checkbox", "Teleport To Rares ⚠️", function(State) kometa.toggles.farmrares = State end)
-farmsecond:Cheat("Checkbox", "Use Instant Converters", function(State) kometa.toggles.instantconverters = State end)
+-- farmsecond:Cheat("Checkbox", "Use Instant Converters", function(State) kometa.toggles.instantconverters = State end)
 local psec1 = planterstab:Sector("First Planter")
 psec1:Cheat("Dropdown", "Planter", function(Option) kometa.planterssettings[1].Type = Option end, {options=require(game:GetService("ReplicatedStorage").PlanterTypes).INVENTORY_ORDER})
 psec1:Cheat("Dropdown", "Field", function(Option) kometa.planterssettings[1].field = Option end, {options=fieldstable})
@@ -1418,8 +1418,8 @@ windsh:Cheat("Button", "Spawn Drop", function()
     game.ReplicatedStorage.Events.WindShrineTrigger:FireServer()
 end, {text = 'Spawn'})
 local farmsettings = setttab:Sector("Autofarm Settings")
-farmsettings:Cheat("Textbox", "Autofarming Walkspeed", function(Value) kometa.vars.farmspeed = Value end, {placeholder = "Default Value = 60"})
-farmsettings:Cheat("Checkbox", "^ Loop Speed On Autofarming", function(State) kometa.toggles.loopfarmspeed = State end)
+-- farmsettings:Cheat("Textbox", "Autofarming Walkspeed", function(Value) kometa.vars.farmspeed = Value end, {placeholder = "Default Value = 60"})
+-- farmsettings:Cheat("Checkbox", "^ Loop Speed On Autofarming", function(State) kometa.toggles.loopfarmspeed = State end)
 farmsettings:Cheat("Checkbox", "Randomize Speed On Autofarming", function(State) kometa.toggles.randomizespeed = State end)
 farmsettings:Cheat("Checkbox", "Don't Walk In Field", function(State) kometa.toggles.farmflower = State end)
 farmsettings:Cheat("Checkbox", "Convert Hive Balloon", function(State) kometa.toggles.convertballoons = State end)
@@ -1716,7 +1716,7 @@ task.spawn(function() while task.wait() do
                 if kometa.toggles.farmclosestleaf then closestleaf() end
                 if kometa.toggles.farmbubbles then getbubble() end
                 if kometa.toggles.farmclouds then getcloud() end
-                if kometa.toggles.farmballoons then getballoons() end
+                --if kometa.toggles.farmballoons then getballoons() end
                 if not kometa.toggles.donotfarmtokens and done then getlinktoken() gettoken() end
                 if not kometa.toggles.farmflower then getflower() end
             end
@@ -1919,7 +1919,7 @@ task.spawn(function() while task.wait(1) do
     temptable.honeycurrent = statsget().Totals.Honey
     -- if kometa.toggles.honeystorm then game.ReplicatedStorage.Events.ToyEvent:FireServer("Honeystorm") end
     -- if kometa.toggles.autospawnsprout then game.ReplicatedStorage.Events.ToyEvent:FireServer("Sprout Summoner") end
-    -if kometa.toggles.collectgingerbreads then game:GetService("ReplicatedStorage").Events.ToyEvent:FireServer("Gingerbread House") end
+    -- if kometa.toggles.collectgingerbreads then game:GetService("ReplicatedStorage").Events.ToyEvent:FireServer("Gingerbread House") end
     -- if kometa.toggles.autodispense then
     --     if kometa.dispensesettings.rj then local A_1 = "Free Royal Jelly Dispenser" local Event = game:GetService("ReplicatedStorage").Events.ToyEvent Event:FireServer(A_1) end
     --     if kometa.dispensesettings.blub then game:GetService("ReplicatedStorage").Events.ToyEvent:FireServer("Blueberry Dispenser") end
@@ -1927,7 +1927,7 @@ task.spawn(function() while task.wait(1) do
     --     if kometa.dispensesettings.treat then game:GetService("ReplicatedStorage").Events.ToyEvent:FireServer("Treat Dispenser") end
     --     if kometa.dispensesettings.coconut then game:GetService("ReplicatedStorage").Events.ToyEvent:FireServer("Coconut Dispenser") end
     --     if kometa.dispensesettings.glue then game:GetService("ReplicatedStorage").Events.ToyEvent:FireServer("Glue Dispenser") end
-    end
+    -- end
     -- if kometa.toggles.autoboosters then 
     --     if kometa.dispensesettings.white then game.ReplicatedStorage.Events.ToyEvent:FireServer("Field Booster") end
     --     if kometa.dispensesettings.red then game.ReplicatedStorage.Events.ToyEvent:FireServer("Red Field Booster") end
