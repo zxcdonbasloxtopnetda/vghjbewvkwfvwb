@@ -1080,7 +1080,7 @@ function getcrosshairs(v)
         task.wait() 
         api.walkTo(v.Position)
     until not v.Parent or v.BrickColor == BrickColor.new("Forest green") or v.BrickColor == BrickColor.new("Royal purple")
-    task.wait(.001)
+    task.wait(.1)
     temptable.crosshair = false
     table.remove(temptable.crosshairs, table.find(temptable.crosshairs, v))
     else
@@ -1426,7 +1426,7 @@ farmsettings:Cheat("Checkbox", "Convert Hive Balloon", function(State) kometa.to
 farmsettings:Cheat("Checkbox", "Don't Convert", function(State) kometa.toggles.donotconvert = State end)
 farmsettings:Cheat("Checkbox", "Don't Farm Tokens", function(State) kometa.toggles.donotfarmtokens = State end)
 farmsettings:Cheat("Checkbox", "Enable Token Blacklisting", function(State) kometa.toggles.enabletokenblacklisting = State end)
-farmsettings:Cheat("Slider", "Walk Speed", function(Value) kometa.vars.walkspeed = Value end, {min = 0, max = 100, suffix = " studs", default = 30})
+farmsettings:Cheat("Slider", "Walk Speed", function(Value) kometa.vars.walkspeed = Value end, {min = 0, max = 70, suffix = " studs", default = 30})
 farmsettings:Cheat("Slider", "Jump Power", function(Value) kometa.vars.jumppower = Value end, {min = 0, max = 120, suffix = " studs", default = 70})
 local raresettings = setttab:Sector("Tokens Settings")
 raresettings:Cheat("Textbox", "Asset ID", function(Value) rarename = Value end, {placeholder = 'rbxassetid'})
@@ -2066,7 +2066,7 @@ task.spawn(function() while task.wait(20*60+10) do
         game:GetService("ReplicatedStorage").Events.PlayerActivesCommand:FireServer({["Name"] = "Super Smoothie"})
     end
 end end)
-task.spawn(function() while task.wait(.00000000000000000001) do
+task.spawn(function() while task.wait(.00000000000000001) do
     if kometa.beessettings.usbtoggle then
         if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.BeePopUp.TypeName.Text:match(kometa.beessettings.usb) then
             temptable.feed(kometa.beessettings.general.x, kometa.beessettings.general.y, "RoyalJelly")
