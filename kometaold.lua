@@ -402,7 +402,7 @@ function farm(trying, important)
     if kometa.toggles.faceballoons and findballoon() ~= nil and findballoon():FindFirstChild("BalloonRoot") then api.humanoidrootpart().CFrame = CFrame.lookAt(api.humanoidrootpart().Position, Vector3.new(findballoon().BalloonRoot.Position.X, api.humanoidrootpart().Position.Y, findballoon().BalloonRoot.Position.Z)) end
     if kometa.toggles.faceflames and findclosestflame() ~= nil then api.humanoidrootpart().CFrame = CFrame.lookAt(api.humanoidrootpart().Position, Vector3.new(findclosestflame().Position.X, api.humanoidrootpart().Position.Y, findclosestflame().Position.Z)) end
     if important and kometa.toggles.bloatfarm and temptable.foundpopstar then temptable.float = true api.teleport(CFrame.new(trying.CFrame.Position) * CFrame.Angles(0, math.rad(180), 0)) end
-    -- if kometa.toggles.loopfarmspeed then game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = kometa.vars.farmspeed end
+    if kometa.toggles.loopfarmspeed then game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = kometa.vars.farmspeed end
     if kometa.toggles.randomizespeed then api.humanoid().WalkSpeed = math.random(30, 70) end
     api.humanoid().AutoRotate = false
     api.humanoid():MoveTo(trying.Position) 
@@ -412,7 +412,7 @@ end
 function farmold(trying, important)
     if kometa.toggles.faceballoons and findballoon() then api.humanoidrootpart().CFrame = CFrame.lookAt(api.humanoidrootpart().Position, Vector3.new(findballoon().BalloonRoot.Position.X, api.humanoidrootpart().Position.Y, findballoon().BalloonRoot.Position.Z)) end
     if kometa.toggles.faceflames and findclosestflame() then api.humanoidrootpart().CFrame = CFrame.lookAt(api.humanoidrootpart().Position, Vector3.new(findclosestflame().Position.X, api.humanoidrootpart().Position.Y, findclosestflame().Position.Z)) end
-    -- if kometa.toggles.loopfarmspeed then game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = kometa.vars.farmspeed end
+    if kometa.toggles.loopfarmspeed then game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = kometa.vars.farmspeed end
     if kometa.toggles.randomizespeed then api.humanoid().WalkSpeed = math.random(30, 70) end
     api.humanoid().AutoRotate = false
     api.humanoid():MoveTo(trying.Position) 
@@ -988,7 +988,7 @@ function getflower()
     flowerrrr = flowertable[math.random(#flowertable)]
     if tonumber((flowerrrr-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude) <= temptable.magnitude/1.4 and tonumber((flowerrrr-fieldposition).magnitude) <= temptable.magnitude/1.4 then 
         if temptable.running == false then 
-            -- if kometa.toggles.loopfarmspeed then game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = kometa.vars.farmspeed end
+            if kometa.toggles.loopfarmspeed then game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = kometa.vars.farmspeed end
             if kometa.toggles.randomizespeed then api.humanoid().WalkSpeed = math.random(30, 70) end
             api.walkTo(flowerrrr) 
         end 
@@ -1034,7 +1034,7 @@ function getflame()
         if tonumber((v.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude) < temptable.magnitude/1.4 and not rtsg().Modifiers.FlameHeat then
             if kometa.toggles.faceballoons and findballoon() then api.humanoidrootpart().CFrame = CFrame.lookAt(api.humanoidrootpart().Position, Vector3.new(findballoon().BalloonRoot.Position.X, api.humanoidrootpart().Position.Y, findballoon().BalloonRoot.Position.Z)) end
             if kometa.toggles.faceflames and findclosestflame() then api.humanoidrootpart().CFrame = CFrame.lookAt(api.humanoidrootpart().Position, Vector3.new(findclosestflame().Position.X, api.humanoidrootpart().Position.Y, findclosestflame().Position.Z)) end
-            -- if kometa.toggles.loopfarmspeed then game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = kometa.vars.farmspeed end
+            if kometa.toggles.loopfarmspeed then game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = kometa.vars.farmspeed end
             if kometa.toggles.randomizespeed then api.humanoid().WalkSpeed = math.random(30, 70) end
             repeat 
                 api.humanoid().AutoRotate = false
@@ -1283,7 +1283,7 @@ farmsecond:Cheat("Checkbox", "Auto Free Antpasses", function(State) kometa.toggl
 farmsecond:Cheat("Checkbox", "Auto Free Robo Passes", function(State) kometa.toggles.freerobopass = State end)
 farmsecond:Cheat("Checkbox", "Auto Special Sprout Summoner", function(State) kometa.toggles.autospawnsprout = State end)
 farmsecond:Cheat("Checkbox", "Auto Honeystorm", function(State) kometa.toggles.honeystorm = State end)
--- farmsecond:Cheat("Checkbox", "Auto Gingerbread Bears", function(State) kometa.toggles.collectgingerbreads = State end) Онетт гей
+farmsecond:Cheat("Checkbox", "Auto Misha gey", function(State) kometa.toggles.collectgingerbreads = State end) Онетт гей
 farmsecond:Cheat("Checkbox", "Auto Samovar", function(State) kometa.toggles.autosamovar = State end)
 farmsecond:Cheat("Checkbox", "Auto Stockings", function(State) kometa.toggles.autostockings = State end)
 farmsecond:Cheat("Checkbox", "Auto Honey Candles", function(State) kometa.toggles.autocandles = State end)
@@ -1294,7 +1294,7 @@ farmsecond:Cheat("Checkbox", "Farm Sprouts", function(State) kometa.toggles.farm
 farmsecond:Cheat("Checkbox", "Farm Puffshrooms", function(State) kometa.toggles.farmpuffshrooms = State end)
 farmsecond:Cheat("Checkbox", "Farm Tickets ⚠️", function(State) kometa.toggles.farmtickets = State end)
 farmsecond:Cheat("Checkbox", "Teleport To Rares ⚠️", function(State) kometa.toggles.farmrares = State end)
--- farmsecond:Cheat("Checkbox", "Use Instant Converters", function(State) kometa.toggles.instantconverters = State end)
+farmsecond:Cheat("Checkbox", "Use Instant Converters", function(State) kometa.toggles.instantconverters = State end)
 local psec1 = planterstab:Sector("First Planter")
 psec1:Cheat("Dropdown", "Planter", function(Option) kometa.planterssettings[1].Type = Option end, {options=require(game:GetService("ReplicatedStorage").PlanterTypes).INVENTORY_ORDER})
 psec1:Cheat("Dropdown", "Field", function(Option) kometa.planterssettings[1].field = Option end, {options=fieldstable})
@@ -1418,8 +1418,8 @@ windsh:Cheat("Button", "Spawn Drop", function()
     game.ReplicatedStorage.Events.WindShrineTrigger:FireServer()
 end, {text = 'Spawn'})
 local farmsettings = setttab:Sector("Autofarm Settings")
--- farmsettings:Cheat("Textbox", "Autofarming Walkspeed", function(Value) kometa.vars.farmspeed = Value end, {placeholder = "Default Value = 60"})
--- farmsettings:Cheat("Checkbox", "^ Loop Speed On Autofarming", function(State) kometa.toggles.loopfarmspeed = State end)
+farmsettings:Cheat("Textbox", "Autofarming Walkspeed", function(Value) kometa.vars.farmspeed = Value end, {placeholder = "Default Value = 60"})
+farmsettings:Cheat("Checkbox", "^ Loop Speed On Autofarming", function(State) kometa.toggles.loopfarmspeed = State end)
 farmsettings:Cheat("Checkbox", "Randomize Speed On Autofarming", function(State) kometa.toggles.randomizespeed = State end)
 farmsettings:Cheat("Checkbox", "Don't Walk In Field", function(State) kometa.toggles.farmflower = State end)
 farmsettings:Cheat("Checkbox", "Convert Hive Balloon", function(State) kometa.toggles.convertballoons = State end)
@@ -1544,11 +1544,11 @@ if (syn or Krnl or (identifyexecutor() and identifyexecutor() == 'ScriptWare')) 
 end
 task.spawn(function() while task.wait() do
     if kometa.toggles.autofarm then
-        --if kometa.toggles.farmcoco then getcoco() end
-        --if kometa.toggles.collectcrosshairs then getcrosshairs() end
+        if kometa.toggles.farmcoco then getcoco() end
+        if kometa.toggles.collectcrosshairs then getcrosshairs() end
         if kometa.toggles.farmflame then getflame() end
         if kometa.toggles.farmglitchedtokens then getglitchtoken() end
-        -- if kometa.toggles.farmfuzzy then getfuzzy() end
+        if kometa.toggles.farmfuzzy then getfuzzy() end
     end
 end end)
 game.Workspace.Particles.ChildAdded:Connect(function(v)
@@ -1716,7 +1716,7 @@ task.spawn(function() while task.wait() do
                 if kometa.toggles.farmclosestleaf then closestleaf() end
                 if kometa.toggles.farmbubbles then getbubble() end
                 if kometa.toggles.farmclouds then getcloud() end
-                --if kometa.toggles.farmballoons then getballoons() end
+                if kometa.toggles.farmballoons then getballoons() end
                 if not kometa.toggles.donotfarmtokens and done then getlinktoken() gettoken() end
                 if not kometa.toggles.farmflower then getflower() end
             end
